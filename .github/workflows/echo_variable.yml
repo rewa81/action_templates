@@ -1,0 +1,22 @@
+name: Hallo-Welt-Aktion
+# Script für ein definiertes python script aus, das im Verzeichnis .devops im selben Repo untergebracht ist.
+
+on:
+  workflow_dispatch:
+
+env: 
+  DEVOPS_DIR: .devops
+
+jobs:
+  hallo_welt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout des Repository
+        uses: actions/checkout@v4
+
+      - name: Ausführung des Skripts
+        run: python ${{ env.DEVOPS_DIR }}/echo_variable2.py
+      
+      - name: Ausgabe der Variable
+        run: echo $VARIABLE_1_GITHUB_VALUE
