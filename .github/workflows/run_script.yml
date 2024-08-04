@@ -1,4 +1,5 @@
 name: Hallo-Welt-Aktion
+# Script für ein definiertes python script aus, das im Verzeichnis .devops im selben Repo untergebracht ist.
 
 on:
   workflow_dispatch:
@@ -15,5 +16,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Ausführung des Skripts
-        run: python ${{ env.DEVOPS_DIR }}/hello_welt.py
+        run: python ${{ env.DEVOPS_DIR }}/echo_variable.py
         shell: sh
