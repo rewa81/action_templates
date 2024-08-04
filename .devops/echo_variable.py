@@ -22,7 +22,7 @@ def get_variable_value(config, variable_name):
         return None
 
 def main():
-    file_path = '../config/test.yml'
+    file_path = './config/test.yml'
     config = read_yaml_file(file_path)
     variable_value = get_variable_value(config, 'variable1')
     if variable_value is not None:
