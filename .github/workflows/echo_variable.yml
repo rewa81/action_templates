@@ -1,4 +1,4 @@
-name: Hallo-Welt-Aktion
+name: workflow_variable_return
 # Script für ein definiertes python script aus, das im Verzeichnis .devops im selben Repo untergebracht ist.
 
 on:
