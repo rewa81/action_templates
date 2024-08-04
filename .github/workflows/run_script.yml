@@ -3,22 +3,17 @@ name: Hallo-Welt-Aktion
 on:
   workflow_dispatch:
 
+env: 
+  DEVOPS_DIR: .devops
+
 jobs:
   hallo_welt:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout des Repository
-        uses: actions/checkout@v2
-
-      - name: Installation von Python
-        run: |
-          python3 --version
-          apt-get update
-          apt-get install -y python3 python3-pip
-          pip3 install --upgrade pip
+        uses: actions/checkout@v4
 
       - name: Ausführung des Skripts
-        run: |
-          cd .devops
-          python hallo_welt.py
+        run: python ${{ env.DEVOPS_DIR }}/hello_welt.py
+        shell: shy
