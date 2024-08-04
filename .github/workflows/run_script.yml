@@ -16,4 +16,4 @@ jobs:
 
       - name: Ausführung des Skripts
         run: python ${{ env.DEVOPS_DIR }}/hello_welt.py
-        shell: shy
+        shell: sh
