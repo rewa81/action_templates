@@ -24,7 +24,7 @@ def get_variable_value(config, variable_name):
 def main():
     file_path = './config/test.yml'
     config = read_yaml_file(file_path)
-    variable_value = get_variable_value(config, 'variable1')
+    variable_value = get_variable_value(config, 'variable2')
     if variable_value is not None:
         print(variable_value)
 
